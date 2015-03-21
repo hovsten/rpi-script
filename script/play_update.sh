@@ -2,6 +2,7 @@
 
 # update to new version
 cd /home/pi/git/rpi-script
+sleep 10
 git pull
 
 # update Wifi
