@@ -5,7 +5,7 @@ cd /home/pi/git/rpi-script
 git pull
 
 # update config-data
-#sudo openssl enc -aes256 -salt -in /etc/wpa_supplicant/wpa_supplicant.conf -out /home/pi/git/rpi-script/script/config-data/wpa_supplicant.conf.enc -pass file:/home/pi/git/rpi-script/script/pubkey/pub_1.key
+sudo openssl rsautl -encrypt -pubin -inkey pub.key -in /etc/wpa_supplicant/wpa_supplicant.conf -out /home/pi/git/rpi-script/script/config-data/wpa_supplicant.conf.enc
 git add /home/pi/git/rpi-script
 git commit -m "client update"
 git push
