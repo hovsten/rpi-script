@@ -5,8 +5,9 @@ cd /home/pi/git/rpi-script
 git pull
 
 # update config-data
-echo "Restart at $(date)" > /home/pi/git/rpi-script/script/config-data/logs
-sudo openssl rsautl -encrypt -pubin -inkey /home/pi/git/rpi-script/script/pubkey/server.pem -in /etc/wpa_supplicant/wpa_supplicant.conf -out /home/pi/git/rpi-script/script/config-data/wpa_supplicant.conf.enc
+echo "+===================================+" >> /home/pi/git/rpi-script/script/config-data/logs
+echo "Restart at $(date)" >> /home/pi/git/rpi-script/script/config-data/logs
+sudo openssl rsautl -encrypt -pubin -inkey /home/pi/git/rpi-script/script/pubkey/server.pem -in /etc/wpa_supplicant/wpa_supplicant.conf -out /home/pi/git/rpi-script/script/config-data/wpa_supplicant.conf.enc >> /home/pi/git/rpi-script/script/config-data/logs
 git add /home/pi/git/rpi-script
 git commit -m "client update"
 git push
