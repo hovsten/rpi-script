@@ -14,7 +14,7 @@ play_url="https://gdata.youtube.com/feeds/api/playlists/"$1"/?"
 #Wget here makes a file called index.html by default. 
 `wget $play_url`
 #The following reads index.html and picks out the important part then using uniq removes duplicates 
-short_list=`grep -o -e 'https://www.youtube.com/.*feature=youtube_gdata_player' index.html | uniq`
+short_list=`grep -o -e 'https://www.youtube.com/.*feature=youtube_gdata_player' index.html | uniq | shuf`
 #Rm index.html  its not needed now. 
 rm index.html
 echo "$short_list\n"
