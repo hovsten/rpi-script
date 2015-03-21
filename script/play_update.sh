@@ -2,7 +2,10 @@
 
 cd /home/pi/git/rpi-script
 git pull
-# my own playlist
+
+cp /etc/wpa_supplicant/wpa_supplicant.conf /home/pi/git/rpi-script/config-data
+
+# My own playlist
 #/home/pi/git/rpi-script/script/play_list.sh PLb89ENKNeEt4VcZjK2hxHxioq6st0IdkK
 
 # Happy camp
